@@ -5,10 +5,10 @@ namespace GameZone.Models
 public class Game : BaseEntity
 {
     
-    [MaxLength(2000)]
+       [MaxLength(2000)]
        public string Description { get; set; }= string.Empty;
 
-    [MaxLength (500)]
+        [MaxLength (500)]
         public string Cover { get; set; } = string.Empty;
 
         public int CategoryId { get; set; }

@@ -134,3 +134,5 @@ C:\Users\Tohami\source\repos\GameZone\GameZone\bin\Debug\net8.0\runtimes\win\lib
 C:\Users\Tohami\source\repos\GameZone\GameZone\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Tohami\source\repos\GameZone\GameZone\obj\Debug\net8.0\GameZone.csproj.AssemblyReference.cache
 C:\Users\Tohami\source\repos\GameZone\GameZone\obj\Debug\net8.0\GameZone.csproj.CopyComplete
+C:\Users\Tohami\source\repos\GameZone\GameZone\bin\Debug\net8.0\libman.json
+C:\Users\Tohami\source\repos\GameZone\GameZone\obj\Debug\net8.0\GameZone.sourcelink.json
