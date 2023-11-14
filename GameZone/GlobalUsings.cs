@@ -7,3 +7,4 @@ global using Microsoft.AspNetCore.Mvc.Rendering;
 global using GameZone.Models;
 global using GameZone.Services;
 global using GameZone.Settings;
+global using GameZone.Attributes;

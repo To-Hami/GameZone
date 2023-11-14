@@ -1,17 +1,17 @@
-﻿@model CreateGameFormViewModels
+﻿@model EditGameFormViewModel
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
 }
 
 
 <h6 class="display-6 my-2">
-    <i class="bi bi-plus-circle-dotted"></i>
-     Add a new game
+    <i class="bi bi-pencil-square"></i>
+     Edit game
 </h6>
 
-<form asp-controller="Games" asp-action="create" enctype="multipart/form-data">
+<form asp-controller="Games" asp-action="Edit" enctype="multipart/form-data">
     <div class="row">
-        <div class="col-md-6 overflow-hidden">
+        <div class="col-md-6 overflow-hidden  ">
 
             <div class="form-group ">
                 <label asp-for="Name" class="col-sm-2 col-form-label text-white"></label>
@@ -60,11 +60,11 @@
             </div>
 
 
-            <button type="submit" class="btn btn-success my-2"> Save</button>
+            <button type="submit" class="btn btn-success my-2"> Update</button>
         
         </div>
-        <div class="col-md-6 d-flex  overflow-hidden justify-content-center align-item-center ">
-            <img alt="Cover" class="image_preview d-none mt-3" />
+        <div class="col-md-6 overflow-hidden d-flex justify-content-center align-item-center ">
+            <img src="@($"{SettingsFile.ImagePath}/{Model.CurrentCover}")" alt="Cover" class="image_preview  mt-3" />
         </div>
     </div>
    
