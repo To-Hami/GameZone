@@ -22,8 +22,9 @@
 
             <div class="form-group ">
                 <label asp-for="CategoryId" class=" col-form-label text-white"></label>
-                <select class="form-select" asp-for="CategoryId" asp-items="Model.Categories">  
-                    <option >Select Category</option>
+                <select class="form-select" asp-for="CategoryId" asp-items="Model.Categories"
+                        data-placeholder="Select Category" data-minimum-results-for-search="Infinity">
+                    <option value="" ></option>
                 </select>
                 <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
@@ -31,8 +32,9 @@
 
             <div class="form-group ">
                 <label asp-for="SelectedDevices" class=" col-form-label text-white"></label>
-                <select class="form-select" asp-for="SelectedDevices" asp-items="Model.Devices">
-                    <option >Select Devices</option>
+                <select class="form-select" asp-for="SelectedDevices" asp-items="Model.Devices"
+                        data-placeholder="Select Devices">
+                    <option value="" ></option>
                 </select>
                 <span asp-validation-for="SelectedDevices" class="text-danger"></span>
             </div>
@@ -48,7 +50,11 @@
 
              <div class="form-group ">
                 <label asp-for="Cover" class="col-sm-2 col-form-label text-white"></label>
-                <input asp-for="Cover" type="file" class="form-control text-black">
+                <input asp-for="Cover" type="file" class="form-control text-black"
+                       data-rule-extension="@SettingsFile.AllowedExtensions.Replace(".",String.Empty)" 
+                        data-msg-extension=" Not Allowed Extensions " 
+                       data-rule-filesize="@SettingsFile.MaxFileSizeInByte"
+                       data-msg-filesize="You file is over than @SettingsFile.MaxFileSizeInMG MB please use small file">
                 <span asp-validation-for="Cover" class="text-danger d-block"></span>
                 <small id="emailHelp" class="form-text text-muted">Only Files Allowed are .jpg , .png , .jpeg with max 1MG size  .</small>
             </div>
@@ -57,13 +63,15 @@
             <button type="submit" class="btn btn-success my-2"> Save</button>
         
         </div>
-        <div class="col-6"></div>
+        <div class="col-6 d-flex justify-content-center align-item-center ">
+            <img alt="Cover" class="image_preview d-none mt-3" />
+        </div>
     </div>
    
 </form>
-
-
-
-
- 
-
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/filesizevlaidator.js" asp-append-version="true"></script>
+    <script src="~/js/formvalidation.js" asp-append-version="true"></script>
+   
+}

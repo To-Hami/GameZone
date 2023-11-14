@@ -7,7 +7,9 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 // Add services to the container.
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddScoped<ICategoriesServices , CategoriesServices>();
+builder.Services.AddScoped<IDevicesServices , DevicesServices>();
+builder.Services.AddScoped<IGameServices , GameServices>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

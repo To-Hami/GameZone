@@ -1,22 +1,30 @@
 ﻿
-using GameZone.Models;
+
 
 namespace GameZone.Controllers
 {
     public class GamesController : Controller
     {
+        private readonly ICategoriesServices _CategoryServices;
+        private readonly IDevicesServices _DevicesServices;
+        private readonly IGameServices _GameServices ;
 
-        private readonly ApplicationDbContext _context;
-
-        public GamesController(ApplicationDbContext context)
+        public GamesController(ICategoriesServices categoryServices,
+                            IDevicesServices devicesServices,
+                            IGameServices gameServices)
         {
-            _context = context;
+
+            _CategoryServices = categoryServices;
+            _DevicesServices = devicesServices;
+            _GameServices = gameServices;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var games = _GameServices.GetAll();
+            return View(games);
         }
+
 
 
         [HttpGet]
@@ -25,41 +33,27 @@ namespace GameZone.Controllers
 
             CreateGameFormViewModels viewModel = new()
             {
-                
-                Categories = _context.Categories.Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name })
-                .OrderBy(c => c.Text)
-                .ToList(),
 
-
-                Devices = _context.Devices.Select(d => new SelectListItem { Value = d.Id.ToString(), Text = d.Name })
-                .OrderBy(d => d.Text)
-                .ToList(),
-
-
-
+                Categories = _CategoryServices.GetSelectList(),
+                Devices = _DevicesServices.SelectedDevices(),
             };
+
             return View(viewModel);
         }
 
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(CreateGameFormViewModels model)
+        public async Task<IActionResult> Create(CreateGameFormViewModels model)
         {
             if (!ModelState.IsValid)
             {
-                model.Categories = _context.Categories.Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name })
-                    .OrderBy(c => c.Text)
-                    .ToList();
-
-
-                model.Devices = _context.Devices.Select(d => new SelectListItem { Value = d.Id.ToString(), Text = d.Name })
-                 .OrderBy(d => d.Text)
-                 .ToList();
-
+                model.Categories = _CategoryServices.GetSelectList();
+                model.Devices = _DevicesServices.SelectedDevices();
 
                 return View(model);
             }
+            await _GameServices.create(model);
             return RedirectToAction(nameof(Index));
         }
     }
