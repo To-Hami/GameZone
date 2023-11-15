@@ -17,36 +17,12 @@
       "PackagePath": "staticwebassets\\assets\\images\\games\\3051faa9-2014-43aa-8985-ce656ca1e5b9.PNG"
     },
     {
-      "Id": "C:\\Users\\Tohami\\source\\repos\\GameZone\\GameZone\\wwwroot\\assets\\images\\games\\4cb31ca4-8d0c-436d-824c-3b7f14540d1b.jpeg",
-      "PackagePath": "staticwebassets\\assets\\images\\games\\4cb31ca4-8d0c-436d-824c-3b7f14540d1b.jpeg"
-    },
-    {
-      "Id": "C:\\Users\\Tohami\\source\\repos\\GameZone\\GameZone\\wwwroot\\assets\\images\\games\\51d1b708-aa30-4c51-b9b8-7192ac9c9fc6.PNG",
-      "PackagePath": "staticwebassets\\assets\\images\\games\\51d1b708-aa30-4c51-b9b8-7192ac9c9fc6.PNG"
-    },
-    {
-      "Id": "C:\\Users\\Tohami\\source\\repos\\GameZone\\GameZone\\wwwroot\\assets\\images\\games\\552fe2a1-b2c3-4115-85b6-09ba22a5927c.jpg",
-      "PackagePath": "staticwebassets\\assets\\images\\games\\552fe2a1-b2c3-4115-85b6-09ba22a5927c.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Tohami\\source\\repos\\GameZone\\GameZone\\wwwroot\\assets\\images\\games\\c3705d28-9920-40c9-bb4d-a6bae148e040.PNG",
-      "PackagePath": "staticwebassets\\assets\\images\\games\\c3705d28-9920-40c9-bb4d-a6bae148e040.PNG"
-    },
-    {
-      "Id": "C:\\Users\\Tohami\\source\\repos\\GameZone\\GameZone\\wwwroot\\assets\\images\\games\\e0606e3e-ec71-43aa-8ad8-4a5d03185f81.PNG",
-      "PackagePath": "staticwebassets\\assets\\images\\games\\e0606e3e-ec71-43aa-8ad8-4a5d03185f81.PNG"
-    },
-    {
       "Id": "C:\\Users\\Tohami\\source\\repos\\GameZone\\GameZone\\wwwroot\\assets\\images\\games\\e21a4c83-7e23-4b98-88d5-2a2ac13b438b.PNG",
       "PackagePath": "staticwebassets\\assets\\images\\games\\e21a4c83-7e23-4b98-88d5-2a2ac13b438b.PNG"
     },
     {
       "Id": "C:\\Users\\Tohami\\source\\repos\\GameZone\\GameZone\\wwwroot\\assets\\images\\games\\f2c692f9-5bbb-4911-93ab-57e31d42c5e6.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\games\\f2c692f9-5bbb-4911-93ab-57e31d42c5e6.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Tohami\\source\\repos\\GameZone\\GameZone\\wwwroot\\assets\\images\\games\\f3691208-38a5-48e1-8fc9-5617ea998d33.jpeg",
-      "PackagePath": "staticwebassets\\assets\\images\\games\\f3691208-38a5-48e1-8fc9-5617ea998d33.jpeg"
     },
     {
       "Id": "C:\\Users\\Tohami\\source\\repos\\GameZone\\GameZone\\wwwroot\\css\\site.css",
@@ -59,6 +35,10 @@
     {
       "Id": "C:\\Users\\Tohami\\source\\repos\\GameZone\\GameZone\\wwwroot\\js\\FormValidation.js",
       "PackagePath": "staticwebassets\\js\\FormValidation.js"
+    },
+    {
+      "Id": "C:\\Users\\Tohami\\source\\repos\\GameZone\\GameZone\\wwwroot\\js\\gamesOptions.js",
+      "PackagePath": "staticwebassets\\js\\gamesOptions.js"
     },
     {
       "Id": "C:\\Users\\Tohami\\source\\repos\\GameZone\\GameZone\\wwwroot\\js\\site.js",
@@ -319,6 +299,14 @@
     {
       "Id": "C:\\Users\\Tohami\\source\\repos\\GameZone\\GameZone\\wwwroot\\lib\\select2\\js\\select2.min.js",
       "PackagePath": "staticwebassets\\lib\\select2\\js\\select2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tohami\\source\\repos\\GameZone\\GameZone\\wwwroot\\lib\\sweetalert2\\sweetalert2.min.css",
+      "PackagePath": "staticwebassets\\lib\\sweetalert2\\sweetalert2.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tohami\\source\\repos\\GameZone\\GameZone\\wwwroot\\lib\\sweetalert2\\sweetalert2.min.js",
+      "PackagePath": "staticwebassets\\lib\\sweetalert2\\sweetalert2.min.js"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.GameZone.Microsoft.AspNetCore.StaticWebAssets.props",

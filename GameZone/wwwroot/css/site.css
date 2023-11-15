@@ -100,4 +100,10 @@ div:where(.swal2-container) div:where(.swal2-popup) {
     max-height: 500px;
     border-radius: 8px;
 }
+
+.swal2-popup {
+    background-color: #001a20;
+    border: 2px solid white;
+    border-radius: 20px;
+}
 /* End Custom Styles */

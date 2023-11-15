@@ -48,7 +48,7 @@
                                         Edit
                                     </a>
 
-                                    <a class="btn btn-danger my-2 rounded-0" asp-controller="Games" >
+                                    <a href="javascript:;"  class="btn btn-danger my-2 rounded-0 js-delete" data-id="@game.Id" >
                                         <i class="bi bi-trash"></i>
                                         Delete
                                     </a>
@@ -67,5 +67,9 @@
 
 
 </div>
+@section Scripts{
+    <script src="~/js/gamesoptions.js" asp-append-version="true"></script>
+}
+
 
 
